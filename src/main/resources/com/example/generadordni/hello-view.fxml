@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generadordni.HelloController">
+   <items>
+      <!-- Panel izquierdo -->
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="300.0" spacing="10">
+               <padding>
+                  <Insets bottom="20" left="20" right="20" top="20" />
+               </padding>
+               <children>
+                  <Label style="-fx-font-size: 20px;" text="Ingrese datos" />
+   
+                  <HBox spacing="10">
+      <children>
+                        <Label style="-fx-font-weight: bold;" text="Nombre" />
+                        <TextField fx:id="nom" />
+      </children>
+                  </HBox>
+   
+                  <HBox spacing="10">
+      <children>
+                        <Label style="-fx-font-weight: bold;" text="Apellidos" />
+                        <TextField fx:id="cogNoms" />
+      </children>
+                  </HBox>
+   
+                  <HBox spacing="10">
+      <children>
+                        <Label style="-fx-font-weight: bold;" text="Multiplicador" />
+                        <TextField fx:id="multiplicador" />
+      </children>
+                  </HBox>
+   
+                  <Button fx:id="genDni" mnemonicParsing="false" onAction="#generarDNI" text="Generar DNI" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+
+      <!-- Panel derecho -->
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="300.0" spacing="10">
+               <padding>
+                  <Insets bottom="20" left="20" right="20" top="20" />
+               </padding>
+               <children>
+                  <Label style="-fx-font-size: 20px;" text="DNI Generado" />
+   
+                  <HBox spacing="10">
+      <children>
+                        <Label style="-fx-font-weight: bold;" text="DNI" />
+                        <TextField fx:id="dni" />
+      </children>
+                  </HBox>
+   
+                  <Button fx:id="borrDni" mnemonicParsing="false" onAction="#borrarDNI" text="Borrar DNI" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
